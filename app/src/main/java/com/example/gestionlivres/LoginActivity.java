@@ -1,0 +1,46 @@
+package com.example.gestionlivres;
+
+import android.app.Activity;
+import android.content.Intent;
+import android.os.Bundle;
+import android.widget.Button;
+
+import androidx.activity.EdgeToEdge;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityOptionsCompat;
+import androidx.core.graphics.Insets;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.WindowInsetsCompat;
+
+public class LoginActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        EdgeToEdge.enable(this);
+        setContentView(R.layout.activity_login);
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
+            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
+            return insets;
+        });
+
+        Button loginBtn = findViewById(R.id.loginBtn);
+        Button signUpBtn = findViewById(R.id.signUpBtn);
+        signUpBtn.setOnClickListener(v -> {
+            Intent intent = new Intent(this, SignUpActivity.class);
+            intent.putExtra("transitionName", "sharedSignUpText");
+            // Start the activity with a transition
+            ActivityOptionsCompat options = ActivityOptionsCompat.makeSceneTransitionAnimation(LoginActivity.this, signUpBtn, "sharedSignUpText");
+            startActivity(intent, options.toBundle());
+            finish();
+        });
+
+        loginBtn.setOnClickListener(v -> {
+            Intent intent = new Intent(this, DashboardActivity.class);
+            startActivity(intent);
+            finish();
+        });
+
+    }
+}

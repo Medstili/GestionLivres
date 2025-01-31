@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">GestionLivres</string>
+    <string name="a_hand_picking_a_book_surrounded_by_flowers">a hand picking a book surrounded by flowers</string>
+    <string name="welcome">Welcome</string>
+    <string name="open_book">Open Book</string>
+    <string name="next">Next</string>
+    <string name="update">update</string>
+    <string name="delete">delete</string>
+    <string name="details">Details</string>
+    <string name="add">Add</string>
+    <string name="all">All</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="login">Login</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="username">Username</string>
+    <string name="back">back</string>
+    <string name="exist">Exist</string>
+    <string name="borrowed">Borrowed</string>
+    <string name="not_exist">Not Exist</string>
+    <string name="not_borrowed">Not Borrowed</string>
+</resources>
