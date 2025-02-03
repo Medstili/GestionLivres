@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "45354457049",
+    "project_id": "gestionlivres-ff02d",
+    "storage_bucket": "gestionlivres-ff02d.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:45354457049:android:85704a0450d9f46e426bc8",
+        "android_client_info": {
+          "package_name": "com.example.gestionlivres"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBU-NcRZNaEfjYR4NSJoJrV9-GyFcIPJNo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

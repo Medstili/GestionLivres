@@ -19,4 +19,18 @@
     <string name="borrowed">Borrowed</string>
     <string name="not_exist">Not Exist</string>
     <string name="not_borrowed">Not Borrowed</string>
+    <string name="description">Description</string>
+    <string name="book_author">Book Author</string>
+    <string name="book_title">Book Title</string>
+    <string name="add_book">Add Book</string>
+    <string name="available">Available?</string>
+    <string name="borrow_date">Borrow Date</string>
+    <string name="return_date">Return Date</string>
+    <string name="upload_image">Upload Image</string>
+    <string name="title">Title :</string>
+    <string name="author">Author :</string>
+    <string name="description_">Description :</string>
+    <string name="availability">Availability :</string>
+    <string name="return_date_">Return Date :</string>
+    <string name="borrowed_date">Borrowed Date :</string>
 </resources>
