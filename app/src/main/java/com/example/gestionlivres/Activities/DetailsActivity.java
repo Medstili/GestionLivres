@@ -1,4 +1,4 @@
-package com.example.gestionlivres;
+package com.example.gestionlivres.Activities;
 
 import android.os.Bundle;
 import android.transition.TransitionInflater;
@@ -15,6 +15,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.bumptech.glide.Glide;
+import com.example.gestionlivres.R;
 import com.example.gestionlivres.bookRecyclerView.Book;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -70,6 +71,8 @@ public class DetailsActivity extends AppCompatActivity {
                     Log.e("Book", "Book object is null");
                     return;
                 }
+
+
                 String imageUrl = book.getBookImageUrl();
                 String title = book.getTitle();
                 String author = book.getAuthor();
@@ -108,6 +111,8 @@ public class DetailsActivity extends AppCompatActivity {
         );
 
         Button detailBackBtn = findViewById(R.id.detailBackBtn);
-        detailBackBtn.setOnClickListener(v -> finish());
+        detailBackBtn.setOnClickListener(v -> {
+            finish();
+        });
     }
 }

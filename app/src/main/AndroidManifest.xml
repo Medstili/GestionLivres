@@ -16,10 +16,10 @@
         android:theme="@style/Theme.GestionLivres"
         tools:targetApi="31">
         <activity
-            android:name=".DetailsActivity"
+            android:name=".Activities.DetailsActivity"
             android:exported="false" />
         <activity
-            android:name=".SplashActivity"
+            android:name=".Activities.SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -28,13 +28,13 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".SignUpActivity"
+            android:name=".auth.SignUpActivity"
             android:exported="false" />
         <activity
-            android:name=".LoginActivity"
+            android:name=".auth.LoginActivity"
             android:exported="false" />
         <activity
-            android:name=".DashboardActivity"
+            android:name=".Activities.DashboardActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

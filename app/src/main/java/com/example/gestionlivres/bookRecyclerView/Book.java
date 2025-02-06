@@ -71,19 +71,6 @@ public class Book {
             });
         }
     }
-//    public void updateBook(String bookId, Context context) {
-//        DatabaseReference bookRef = FirebaseDatabase.getInstance().getReference("Books").child(bookId);
-//
-//
-//        bookRef.setValue(updatedBook).addOnCompleteListener(task -> {
-//            if (task.isSuccessful()) {
-//                Toast.makeText(context, "Book updated successfully!", Toast.LENGTH_SHORT).show();
-//            }
-//            else {
-//                Toast.makeText(context, "Failed to update book", Toast.LENGTH_SHORT).show();
-//            }
-//        });
-//    }
 
     public void deleteBook(String bookId, Context context) {
         DatabaseReference bookRef = FirebaseDatabase.getInstance().getReference("Books").child(bookId);
@@ -96,26 +83,23 @@ public class Book {
             }
         });
     }
-//    public void getAllBooks() {
-//        DatabaseReference booksRef = FirebaseDatabase.getInstance().getReference("Books");
-//
-//        booksRef.addValueEventListener(new ValueEventListener() {
-//            @Override
-//            public void onDataChange(@NonNull DataSnapshot snapshot) {
-//                for (DataSnapshot bookSnapshot : snapshot.getChildren()) {
-//                    Book book = bookSnapshot.getValue(Book.class);
-//                    if (book != null) {
-//                        Log.d("Firebase", "Title: " + book.getTitle() + ", Author: " + book.getAuthor());
-//                    }
-//                }
-//            }
-//
-//            @Override
-//            public void onCancelled(@NonNull DatabaseError error) {
-//                Log.e("Firebase", "Error fetching data", error.toException());
-//            }
-//        });
-//    }
+
+    public void updateBook(Context context){
+        if (getBookId() == null || getBookId().isEmpty()) {
+            Toast.makeText(context, "Error: Book ID is missing!", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        DatabaseReference bookRef = FirebaseDatabase.getInstance().getReference("Books").child(getBookId());
+
+        bookRef.setValue(this).addOnCompleteListener(task -> {
+            if (task.isSuccessful()) {
+                Toast.makeText(context, "Book updated successfully!", Toast.LENGTH_SHORT).show();
+            } else {
+                Toast.makeText(context, "Failed to update book", Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
 
 
 }
